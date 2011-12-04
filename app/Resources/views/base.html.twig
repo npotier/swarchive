@@ -4,9 +4,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+
+
+         <link href="{{ asset('css/bootstrap.css') }}" type="text/css" rel="stylesheet" />
+         <link href="{{ asset('css/styles.css') }}" type="text/css" rel="stylesheet" />
+      
+
+         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+      
+      {% include '::header.html.twig'%}
+
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
