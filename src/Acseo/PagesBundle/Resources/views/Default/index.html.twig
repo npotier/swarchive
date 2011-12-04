@@ -1,0 +1,5 @@
+{% render "AcseoStartupWeekendBundle:Location:locationList" %}
+<hr />
+{% render "AcseoStartupWeekendBundle:Event:lastEvents" with {'max': 5} %}
+<hr />
+{% render "AcseoStartupBundle:Comment:lastComments" with {'max': 5} %}

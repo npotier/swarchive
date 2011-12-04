@@ -1,0 +1,8 @@
+{% for comment in lastComments %}
+    * Comment on {{comment.startup.name}} (Date : {{ comment.date|date("d/m/Y") }} )
+    <br />
+    {{comment.content}}
+    <hr />
+{% else %}
+    No Comment have been found.
+{% endfor %}

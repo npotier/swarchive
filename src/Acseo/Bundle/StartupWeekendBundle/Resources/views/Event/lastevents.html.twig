@@ -1,0 +1,7 @@
+{% for event in lastEvents %}
+
+    * <a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.name }}</a>, date : {{ event.eventDate|date("d/m/Y") }}
+    <br />
+{% else %}
+    No Event have been found.
+{% endfor %}

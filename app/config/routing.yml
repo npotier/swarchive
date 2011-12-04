@@ -1,0 +1,23 @@
+AcseoPagesBundle:
+    resource: "@AcseoPagesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+AcseoStartupWeekendBundle:
+    resource: "@AcseoStartupWeekendBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+AcseoStartupBundle:
+    resource: "@AcseoStartupBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+AcseoUserBundle:
+    resource: "@AcseoUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

@@ -1,0 +1,6 @@
+{% for location in locationList %}
+    * {{ location.name }}, lat : {{ location.latitude }}, lng {{ location.longitude }} 
+    <br />
+{% else %}
+    No Location have been found.
+{% endfor %}

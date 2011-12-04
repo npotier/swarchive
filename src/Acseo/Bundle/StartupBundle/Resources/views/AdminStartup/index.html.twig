@@ -1,0 +1,49 @@
+<h1>Startup list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Twitter</th>
+            <th>Facebook</th>
+            <th>Website</th>
+            <th>Logo</th>
+            <th>Pitch</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('admin_startup_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.name }}</td>
+            <td>{{ entity.twitter }}</td>
+            <td>{{ entity.facebook }}</td>
+            <td>{{ entity.website }}</td>
+            <td>{{ entity.logo }}</td>
+            <td>{{ entity.pitch }}</td>
+            <td>{{ entity.description }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('admin_startup_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('admin_startup_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('admin_startup_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
