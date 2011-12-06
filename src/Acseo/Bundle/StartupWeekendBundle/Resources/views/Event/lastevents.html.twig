@@ -1,7 +1,23 @@
-{% for event in lastEvents %}
+<div class="lastevents">
 
-    * <a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.name }}</a>, date : {{ event.eventDate|date("d/m/Y") }}
-    <br />
-{% else %}
-    No Event have been found.
-{% endfor %}
+  <h2>Last events</h2>
+
+  <div class="events">
+  {% for event in lastEvents %}
+    <div class="event">
+      
+      <div class="date">
+        {{ event.eventDate|date("d M") }} <span>{{ event.eventDate|date("Y") }}</span>
+      </div>
+
+      <div class="detail">
+        <h3><a href="{{ path('event_show', { 'id': event.id }) }}">{{ event.name }}</a></h3>
+        <p>Marseille, France</p>
+      </div>
+
+    </div>
+  {% else %}
+    <p>No Event have been found.</p>
+  {% endfor %}
+  </div>
+</div>

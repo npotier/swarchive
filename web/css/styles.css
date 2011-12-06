@@ -1,0 +1,138 @@
+body {
+  background: url(../images/bg.gif) repeat;
+  font-family: tahoma, "lucida grande", arial;
+}
+
+#wrap { background: url(../images/header.gif) repeat-x;}
+.header { margin-left: 70px; margin-bottom: 20px; }
+.header .logo { float: left; }
+
+#footer {padding: 20px 0px; text-align: center; font-size: 12px;}
+
+#topNav {
+  float: left;
+  margin: 65px 0 0 10px;
+ border-radius: 10px;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ background: url(../images/bg-nav.png) repeat-x;
+}
+#topNav ul {
+   margin: 0px;
+}
+#topNav ul li {
+  text-align: center;
+  padding: 0 23px;
+  display: inline;
+  zoom: 1; *display: static;
+  
+  list-style: none inside;
+  
+  height: 30px;
+  line-height: 30px;
+}
+#topNav ul li a {
+  color: #fff;
+  font-size: 14px;
+}
+
+
+
+/** dayproject **/
+#dayproject {padding: 0px 70px 10px;}
+#dayproject .left { float: left; padding-right: 10px; }
+#dayproject .right { float: right; width: 610px; }
+#dayproject .description {}
+#dayproject .gobtn {
+  float: right;
+  text-transform: uppercase;
+  font-size: 11px;
+  background: url(../images/btngo.gif) no-repeat;
+  width: 121px;
+  height: 22px;
+  padding: 1px 0 0 10px;
+}
+#dayproject .gobtn a { color: #ccc; } 
+
+/*** BIGMAP ***/
+#bigmap {}
+#bigmap h2 {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #333;
+}
+#bigmap .map { 
+  background: url(../images/bigmapbg.png) no-repeat left bottom;
+  padding-bottom: 44px;
+}
+#bigmap .map img{
+  display: block;
+  border: 1px solid #999;
+}
+
+/***homenews **/
+#homenews {}
+#homenews h2 {
+  background: url(../images/bg-star.gif) no-repeat bottom;
+  padding: 0 0 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  font-weight: bold;
+}
+#homenews .lastevents { width: 460px; margin-right: 10px; float: left;}
+#homenews .lastcomments { width: 460px; margin-left: 10px; float: left; }
+
+#homenews .events {
+  
+}
+#homenews .events .event {
+  background: url(../images/bg-event.gif) no-repeat;
+  height: 70px;
+  width: 460px;
+}
+#homenews .events .event .date {
+  line-height: 60px;
+  width: 110px;
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  float: left;
+}
+#homenews .events .event .date span {
+  font-size: 12px;
+}
+#homenews .events .event .detail {
+  float: left;
+  padding: 10px 0 0 10px;
+}
+#homenews .events .event .detail h3 { line-height: 20px;}
+#homenews .events .event .detail h3 a{
+  font-size: 18px;
+  color: #333;
+  font-weight: normal;
+}
+#homenews .events .event .detail p {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #999;
+}
+#homenews .comments {}
+#homenews .comments .comment {
+  padding-bottom: 20px;
+}
+#homenews .comments .comment .top {
+  background: url(../images/bg-comment-top.gif) no-repeat;
+  width: 460px;
+  height: 5px;
+}
+#homenews .comments .comment .middle { background: #fff; padding: 4px 10px; font-size: 12px;}
+#homenews .comments .comment .bottom {
+  background: url(../images/bg-comment-bottom.gif) no-repeat;
+  width: 460px;
+  height: 17px;
+}
+#homenews .comments .comment .meta { font-size: 12px;}
+#homenews .comments .comment .meta a {color: #999;}

@@ -1,8 +1,20 @@
-{% for comment in lastComments %}
-    * Comment on {{comment.startup.name}} (Date : {{ comment.date|date("d/m/Y") }} )
-    <br />
-    {{comment.content}}
-    <hr />
-{% else %}
-    No Comment have been found.
-{% endfor %}
+<div class="lastcomments">
+  <h2>Last comments</h2>
+
+  <div class="comments">
+    {% for comment in lastComments %}
+      <div class="comment">
+        <div class="top"></div>
+        <div class="middle">
+          {{comment.content}}
+        </div>
+        <div class="bottom"></div>
+        <div class="meta">
+          John Doe, {{ comment.date|date("d M. Y") }} on <a href="#">{{comment.startup.name}}</a>
+        </div> 
+      </div>
+    {% else %}
+        <p>No Comment have been found.</p>
+    {% endfor %}
+  </div>
+</div>

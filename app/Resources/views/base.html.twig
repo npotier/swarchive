@@ -18,10 +18,14 @@
     </head>
     <body>
       
-      {% include '::header.html.twig'%}
-
-
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+      <div id="wrap">
+        <div class="container">
+          {% include '::header.html.twig'%}
+          {% block body %}{% endblock %}
+          {% include '::footer.html.twig'%}
+        </div
+      </div
+      
+      {% block javascripts %}{% endblock %}
     </body>
 </html>

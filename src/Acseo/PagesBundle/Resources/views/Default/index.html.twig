@@ -1,5 +1,43 @@
-{% render "AcseoStartupWeekendBundle:Location:locationList" %}
-<hr />
-{% render "AcseoStartupWeekendBundle:Event:lastEvents" with {'max': 5} %}
-<hr />
-{% render "AcseoStartupBundle:Comment:lastComments" with {'max': 5} %}
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+<div id="dayproject" class="row">
+  
+  <div class="left"><a href="#"><img src="{{ asset('images/tmp1.png') }}" alt=""/></a></div>
+  <div class="right">
+    <h2>Booking Brick</h2>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec egestas posuere rutrum. Maecenas condimentum egestas ante in accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque ac nibh lectus. Nunc fringilla, augue sed vestibulum interdum, nisl tortor consectetur leo, sit amet elementum nibh mauris sit amet diam. Duis enim quam, tincidunt sed fermentum nec, mattis in ante. Aenean in fringilla lacus. Praesent vitae lacus at odio suscipit dignissim a sit amet elit. Curabitur in risus mi. Fusce sit amet nisl urna, ut fringilla leo. Phasellus mi lorem, ullamcorper ut semper sagittis, convallis nec ligula.
+    </p>
+
+    <div class="gobtn">
+      <a href="#">Go to the project</a>
+    </div>
+  </div>
+</div>
+
+
+<div id="bigmap">
+  <div class="container">
+    <div class="row">
+      <h2>Find a project by cities!</h2>
+      <div class="map"><img src="{{ asset('images/bigmap.jpg') }}" alt="map"/></div>
+    </div>
+  </div>
+</div>
+
+
+<!--{% render "AcseoStartupWeekendBundle:Location:locationList" %}-->
+
+<div id="homenews">
+  <div class="container">
+    <div class="row">
+      {% render "AcseoStartupWeekendBundle:Event:lastEvents" with {'max': 5} %}
+      {% render "AcseoStartupBundle:Comment:lastComments" with {'max': 5} %}
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
