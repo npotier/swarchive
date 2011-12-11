@@ -1,26 +1,14 @@
 <h1>Event</h1>
 
-<table class="record_properties">
-    <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ entity.id }}</td>
-        </tr>
-        <tr>
-            <th>Name</th>
-            <td>{{ entity.name }}</td>
-        </tr>
-        <tr>
-            <th>Eventdate</th>
-            <td>{{ entity.eventDate|date('Y-m-d H:i:s') }}</td>
-        </tr>
-        <tr>
-            <th>Numberofparticipant</th>
-            <td>{{ entity.numberOfParticipant }}</td>
-        </tr>
-    </tbody>
-</table>
-
+            <br />Id :{{ event.id }}</td>
+            <br />Name :{{ event.name }}</td>
+            <br />Eventdate :{{ event.eventDate|date('Y-m-d H:i:s') }}</td>
+            <br />Numberofparticipant :{{ event.numberOfParticipant }}</td>
+        <ol>
+        {% for startup in event.startups %}
+            <li><a href="{{ path('startup_show', { 'id': startup.id }) }}">{{startup.name}}</a></li>
+        {% endfor %}
+        </ol>
 <ul class="record_actions">
     <li>
         <a href="{{ path('event') }}">
