@@ -81,7 +81,23 @@ class Startup
      * @ORM\JoinColumn(name="event_id", referencedColumnName="id")
      */
     private $event;
+ 
+    /**
+     * @var integer $rank
+     *
+     * @ORM\Column(name="rank", type="integer")
+     */
+    private $rank;
 
+    public function getRank()
+    {
+        return $this->rank;
+    }
+
+    public function setRank($rank)
+    {
+        $this->rank = $rank;
+    }
 
     /** 
      * @var $tags
@@ -100,6 +116,7 @@ class Startup
     {
         $this->tags = $tags;
     }
+
 
     /** 
      * @var $users
@@ -316,6 +333,8 @@ class Startup
 
     public function __construct()
     {
+        //Set default rank to 99 in order to have a good sort for non ranked startups
+        $this->rank = 99;
         $this->tags = new \Doctrine\Common\Collections\ArrayCollection();
         $this->users = new \Doctrine\Common\Collections\ArrayCollection();
 
