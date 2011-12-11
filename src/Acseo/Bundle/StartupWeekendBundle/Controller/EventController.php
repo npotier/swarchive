@@ -49,7 +49,7 @@ class EventController extends Controller
         }
 
         return array(
-            'entity'      => $entity,
+            'event'      => $entity,
         );
     }
 
