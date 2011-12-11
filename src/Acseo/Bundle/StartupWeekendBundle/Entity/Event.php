@@ -77,6 +77,7 @@ class Event
      * @var $startups
      *
      * @ORM\OneToMany(targetEntity="Acseo\Bundle\StartupBundle\Entity\Startup", mappedBy="event")
+     * @ORM\OrderBy({"rank" = "ASC"})
      */
     private $startups;
 
